@@ -87,7 +87,7 @@ const Swim = () => {
       </form>
       {result !== null && (
         <div className="mt-4">
-          <p>Your CSS is {result} per 100</p>
+          <p>Your CSS swim pace is {result} per 100</p>
         </div>
       )}
     </div>
