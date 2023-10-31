@@ -11,8 +11,8 @@ export const Main = () => {
     const [isBikeChecked, setIsBikeChecked] = useState(false)
     const [isRunChecked, setIsRunChecked] = useState(false)
 
-    const handleCheckboxChange = (event) => {
-        const checkboxName = event.target.name
+    const handleCheckboxChange = (e) => {
+        const checkboxName = e.target.name
         
         setIsSwimChecked(checkboxName === 'swim')
         setIsBikeChecked(checkboxName === 'Bike')

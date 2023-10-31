@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Triathlon Threshold Calculator',
-  description: 'An online tool for expiditing coaching threshold calculations across sports',
+  description: 'An online tool for expediting coaching threshold calculations across sports',
 }
 
 export default function RootLayout({ children }) {
