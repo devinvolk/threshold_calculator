@@ -15,7 +15,6 @@ const Swim = () => {
 
 
   // Logic for generating select option for the form
-
   const generateTimeOption = (min, max) => {
     const options = []
     for (let i = min; i <= max; i++) {
@@ -30,7 +29,6 @@ const Swim = () => {
   const fourHundredTimeOptions = generateTimeOption(240, 600)
 
   // Handling changes to the select elements
-
   const handleTwoHundredChange = (e) => {
     setSelectedTwoHundredTime(e.target.value)
   }
@@ -40,7 +38,6 @@ const Swim = () => {
   }
 
   // Handle submit logic, data table creation, and error handling
-
   const handleSubmit = (e) => {
     e.preventDefault();
 

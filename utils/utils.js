@@ -33,3 +33,13 @@ export function createTableData(descriptions, paces) {
     }
     return tableData
   }
+
+export function createZones(cp, scaler) {
+  const zones = []
+  for (let i=0; i<11; i+=2){
+    const zoneMin = cp*scaler[i]
+    const zoneMax = cp*scaler[i+1]
+    zones.push(`${zoneMin.toFixed(0)}-${zoneMax.toFixed(0)}`)
+  }
+  return zones
+}
