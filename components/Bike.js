@@ -12,8 +12,8 @@ const Bike = () => {
   const [tableData, setTableData] = useState(null)
   const [showAlert, setShowAlert] = useState(false)
   const [formValues, setFormValues] = useState({
-    p1: 250,
-    p2: 180,
+    p1: null,
+    p2: null,
     criticalPower: null,
     workCapacity: null,
   })
@@ -23,13 +23,15 @@ const Bike = () => {
     setFormValues({
       ...formValues,
       p1: parseInt(e.target.value),
-  })}
+    })
+  }
 
   const handleP2Change = (e) => {
     setFormValues({
       ...formValues,
       p2: parseInt(e.target.value),
-  })}
+    })
+  }
 
     // Handle submit logic, data table creation, and error handling
   const handleSubmit = (e) => {
@@ -45,11 +47,6 @@ const Bike = () => {
           criticalPower: power,
           workCapacity: work,
         });
-
-        // Utility functions for cleaner more concise code
-        const data = createTableData(descriptions, createZones(formValues.criticalPower, scaler));
-
-        setTableData(data);
         setShowAlert(false);
 
       } catch (error) {
@@ -77,26 +74,26 @@ const Bike = () => {
     <div className='flex flex-col items-center justify-center mt-4'>
 
       {/* Form */}
-      <form onSubmit={handleSubmit}>
-        <div className='mt-4'>
-          <label htmlFor='p1' className='capitalize'>3 minute average power:</label>
+      <form onSubmit={handleSubmit} className='w-11/12 md:w-1/3'>
+        <div className='mt-4 grid grid-cols-1'>
+          <label htmlFor='p1' className='capitalize justify-self-center md:justify-self-start'>3 minute average power:</label>
           <input 
             id='p1'
             type='text'
-            placeholder='250'
+            placeholder='375'
             onChange={handleP1Change}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-11/12 justify-self-center shadow appearance-none border rounded md:w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             >
           </input>
         </div>
-        <div className='mt-4'>
-          <label htmlFor='p2' className='capitalize'>12 minute average power:</label>
+        <div className='mt-4 grid grid-cols-1'>
+          <label htmlFor='p2' className='capitalize justify-self-center md:justify-self-start'>12 minute average power:</label>
           <input 
             id='p2'
             type='text'
-            placeholder='180'
+            placeholder='300'
             onChange={handleP2Change}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-11/12 justify-self-center shadow appearance-none border rounded md:w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             >
           </input>
         </div>

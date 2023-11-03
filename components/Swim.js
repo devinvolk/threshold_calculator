@@ -66,20 +66,18 @@ const Swim = () => {
   }
 
   return (
-    <div className='mt-4'>
+    <div className='flex flex-col items-center justify-center mt-4'>
 
       {/* Form */}
-      <form onSubmit={handleSubmit}>
-        <div className='flex flex-col md:flex-row'>
-          <div className='mb-4 md:w-1/2'>
-            <label htmlFor='200Time' className="block text-sm font-medium text-center md:text-xl">200 Time</label>
-            <div className='flex justify-center'>
+      <form onSubmit={handleSubmit} className='w-11/12 md:w-1/3'>
+          <div className='mt-4 grid grid-cols-1'>
+            <label htmlFor='200Time' className="capitalize justify-self-center">200 Time</label>
               <select
                 id='200Time'
                 name='200Time'
                 value={selectedTwoHundredTime}
                 onChange={handleTwoHundredChange}
-                className="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                className="w-11/12 justify-self-center md:w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               >
                 {twoHundredTimeOptions.map((time, index) => (
                   <option key={index} value={time}>
@@ -87,17 +85,15 @@ const Swim = () => {
                   </option>
                 ))}
               </select>
-            </div>
           </div>
-          <div className='mb-4 md:w-1/2'>
-            <label htmlFor='400Time' className="block text-sm font-medium text-center md:text-xl">400 Time</label>
-            <div className='flex justify-center'>
+          <div className='mt-4 grid grid-cols-1'>
+            <label htmlFor='400Time' className="capitalize justify-self-center">400 Time</label>
               <select
                 id='400Time'
                 name='400Time'
                 value={selectedFourHundredTime}
                 onChange={handleFourHundredChange}
-                className="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                className="w-11/12 justify-self-center md:w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               >
                 {fourHundredTimeOptions.map((time, index) => (
                   <option key={index} value={time}>
@@ -105,9 +101,7 @@ const Swim = () => {
                   </option>
                 ))}
               </select>
-            </div>
           </div>
-        </div>
         <div className='mt-6 flex justify-center'>
           <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
             Calculate
