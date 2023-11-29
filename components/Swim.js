@@ -66,18 +66,18 @@ const Swim = () => {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center mt-4'>
+    <div className='flex flex-col items-center justify-center'>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className='w-11/12 md:w-1/3'>
-          <div className='mt-4 grid grid-cols-1'>
-            <label htmlFor='200Time' className="capitalize justify-self-center">200 Time</label>
+      <form onSubmit={handleSubmit} className='w-11/12 md:w-full'>
+          <div className='grid grid-cols-1'>
+            <label htmlFor='200Time' className="capitalize text-lg justify-self-center md:text-2xl">200 Time</label>
               <select
                 id='200Time'
                 name='200Time'
                 value={selectedTwoHundredTime}
                 onChange={handleTwoHundredChange}
-                className="w-11/12 justify-self-center md:w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                className="w-11/12 justify-self-center md:w-full md:mx-0 rounded-md border-0 py-2 px-2 md:py-3 md:px-3 text-gray-900 shadow-sm md:shadow-lg ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm md:text-lg sm:leading-6"
               >
                 {twoHundredTimeOptions.map((time, index) => (
                   <option key={index} value={time}>
@@ -87,13 +87,13 @@ const Swim = () => {
               </select>
           </div>
           <div className='mt-4 grid grid-cols-1'>
-            <label htmlFor='400Time' className="capitalize justify-self-center">400 Time</label>
+            <label htmlFor='400Time' className="capitalize text-lg justify-self-center md:text-2xl">400 Time</label>
               <select
                 id='400Time'
                 name='400Time'
                 value={selectedFourHundredTime}
                 onChange={handleFourHundredChange}
-                className="w-11/12 justify-self-center md:w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                className="w-11/12 justify-self-center md:w-full md:mx-0 rounded-md border-0 py-2 px-2 md:py-3 md:px-3 text-gray-900 shadow-sm md:shadow-lg ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm md:text-lg sm:leading-6"
               >
                 {fourHundredTimeOptions.map((time, index) => (
                   <option key={index} value={time}>

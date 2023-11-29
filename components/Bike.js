@@ -71,29 +71,29 @@ const Bike = () => {
   }, [formValues.criticalPower, formValues.workCapacity])
 
   return (
-    <div className='flex flex-col items-center justify-center mt-4'>
+    <div className='flex flex-col items-center justify-center'>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className='w-11/12 md:w-1/3'>
-        <div className='mt-4 grid grid-cols-1'>
-          <label htmlFor='p1' className='capitalize justify-self-center md:justify-self-start'>3 minute average power:</label>
+      <form onSubmit={handleSubmit} className='w-11/12 md:w-full'>
+        <div className='grid grid-cols-1'>
+          <label htmlFor='p1' className='capitalize text-lg justify-self-center md:justify-self-start md:text-2xl'>3 minute average power:</label>
           <input 
             id='p1'
             type='text'
             placeholder='375'
             onChange={handleP1Change}
-            className="w-11/12 justify-self-center shadow appearance-none border rounded md:w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-11/12 justify-self-center shadow md:shadow-lg appearance-none border rounded md:w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             >
           </input>
         </div>
         <div className='mt-4 grid grid-cols-1'>
-          <label htmlFor='p2' className='capitalize justify-self-center md:justify-self-start'>12 minute average power:</label>
+          <label htmlFor='p2' className='capitalize text-lg justify-self-center md:justify-self-start md:text-2xl'>12 minute average power:</label>
           <input 
             id='p2'
             type='text'
             placeholder='300'
             onChange={handleP2Change}
-            className="w-11/12 justify-self-center shadow appearance-none border rounded md:w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-11/12 justify-self-center shadow md:shadow-lg appearance-none border rounded md:w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             >
           </input>
         </div>
