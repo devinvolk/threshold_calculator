@@ -149,15 +149,12 @@ const Run = () => {
         <div className='flex flex-col justify-center items-center mt-7'>
           <h3 className='text-xl md:text-3xl font-bold'>Example set:</h3>
           <h4 className='text-lg md:text-2xl font-bold mt-4'>Warm Up:</h4>
-          <p className='text-lg md:text-xl mt-2'>20 minutes easy spinning</p>
-          <p className='text-lg md:text-xl'>3 minutes zone 3 (Moderate intensity)</p>
-          <p className='text-lg md:text-xl'>3 minutes zone 4 (Threshold)</p>
-          <p className='text-lg md:text-xl'>1 minutes zone 5 (Hard)</p>
-          <p className='text-lg md:text-xl'>2 minutes easy reset</p>
+          <p className='text-lg md:text-xl mt-2'>20 minutes easy jog</p>
+          <p className='text-lg md:text-xl'>Strides and dynamics</p>
           <h4 className='text-xl md:text-2xl font-bold mt-4'>Main Set:</h4>
           <p className='text-xl mt-2'>3 minutes all out</p>
           <p className='text-xl'>15 minutes easy recovery</p>
-          <p className='text-xl'>12 minutes all out</p>
+          <p className='text-xl'>8 minutes all out</p>
           <h4 className='text-xl md:text-2xl font-bold mt-4'>Cool Down:</h4>
           <p className='text-lg md:text-xl mt-2'>10-15 minutes very easy spinning</p>
         </div>
