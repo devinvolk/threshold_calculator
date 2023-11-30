@@ -150,6 +150,31 @@ const Swim = () => {
           </div>
         </div>
       )}
+      <div className='mx-5 mt-10'>
+        <h2 className='text-center font-bold text-3xl md:text-4xl'>How to test your Critical Swim Speed:</h2>
+        <p className='text-center text-lg md:text-2xl mt-2'>
+        To conduct a swim CSS (Critical Swim Speed) test, begin with a thorough warm-up to ensure your body is prepared for the test. 
+        The CSS test involves swimming a series of timed distances, a 400 and a 200, 
+        with a rest interval in between. The objective is to swim these distances at a consistent pace, 
+        pushing yourself to maintain the fastest sustainable speed. Record the time it takes to complete each distance, 
+        and use these times in the calculator above. Your CSS pace represents the pace you should be able to sustain 
+        for about a 1500 all out.
+        </p>
+        <div className='flex flex-col justify-center items-center mt-7'>
+          <h3 className='text-xl md:text-3xl font-bold'>Example set:</h3>
+          <h4 className='text-lg md:text-2xl font-bold mt-4'>Warm Up:</h4>
+          <p className='text-xl mt-2'>500 easy swim</p>
+          <p className='text-lg md:text-xl'>4x50 drill on 15 seconds rest</p>
+          <p className='text-lg md:text-xl'>4x50 build on 15 seconds rest</p>
+          <p className='text-lg md:text-xl text-center'>4x25 400 race pace on 15 seconds rest</p>
+          <h4 className='text-xl md:text-2xl font-bold mt-4'>Main Set:</h4>
+          <p className='text-lg md:text-xl mt-2'>400 all out</p>
+          <p className='text-lg md:text-xl text-center'>5 minutes rest, can include easy swimming</p>
+          <p className='text-lg md:text-xl'>200 all out</p>
+          <h4 className='text-xl md:text-2xl font-bold mt-4'>Cool Down:</h4>
+          <p className='text-lg md:text-xl mt-2'>200-500 choice</p>
+        </div>
+      </div>
     </div>
   );
 };

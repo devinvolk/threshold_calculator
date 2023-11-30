@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className='mt-5 px-5 md:mt-10'>
-        <h1 className='text-3xl md:text-5xl md:text-center'>Why is threshold testing important?</h1>
+        <h1 className='text-3xl font-bold md:text-5xl md:text-center'>Why is threshold testing important?</h1>
         <p className='text-lg mt-2 md:text-2xl md:mt-7 md:text-center'>
         Threshold testing plays a pivotal role in triathlon training and performance optimization. 
         Understanding and regularly assessing individual thresholds, such 

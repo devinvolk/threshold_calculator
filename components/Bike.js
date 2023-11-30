@@ -74,7 +74,7 @@ const Bike = () => {
     <div className='flex flex-col items-center justify-center'>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className='w-11/12 md:w-full'>
+      <form onSubmit={handleSubmit} className='w-11/12 md:w-1/3'>
         <div className='grid grid-cols-1'>
           <label htmlFor='p1' className='capitalize text-lg justify-self-center md:justify-self-start md:text-2xl'>3 minute average power:</label>
           <input 
@@ -149,6 +149,39 @@ const Bike = () => {
         </div>
       </div>
       )}
+      <div className='mx-5 mt-10'>
+        <h2 className='text-center font-bold text-3xl md:text-4xl'>Why Critical Power?</h2>
+        <p className='text-center text-lg md:text-2xl mt-2'>
+        Why opt for Critical Power (CP) over Functional Threshold Power (FTP)? While FTP has a longer history, 
+        CP is a newer model for estimating a cyclist's threshold, offering advantages in the testing process. 
+        CP is typically measured with 3-minute and 12-minute all-out efforts, or an unpaced 4-minute test. 
+        The shorter testing duration allows for more frequent assessments within a training block without 
+        requiring a significant taper or precise pacing, as with the standard 20-minute FTP test. This flexibility 
+        enables athletes to regularly evaluate changes to their CP, allowing for more specific and tailored training adjustments.
+        </p>
+        <h2 className='text-center font-bold text-3xl md:text-4xl mt-7'>How to test your Critical Power:</h2>
+        <p className='text-center text-lg md:text-2xl mt-2'>
+        To conduct a cycling CP (critical power) test, it is best to use a smart trainer or a climb with a consistent gradient. 
+        After a thorough warm-up, do a 3-minute all-out effort, try to consistently maintain your highest possible power. 
+        Take a long easy break of at least 10-15 minutes, then do a 12-minute all-out effort. 
+        This can be broken up into two consecutive days. Take your average power for each test and input them into the calculator above.
+        </p>
+        <div className='flex flex-col justify-center items-center mt-7'>
+          <h3 className='text-xl md:text-3xl font-bold'>Example set:</h3>
+          <h4 className='text-lg md:text-2xl font-bold mt-4'>Warm Up:</h4>
+          <p className='text-lg md:text-xl mt-2'>20 minutes easy spinning</p>
+          <p className='text-lg md:text-xl'>3 minutes zone 3 (Moderate intensity)</p>
+          <p className='text-lg md:text-xl'>3 minutes zone 4 (Threshold)</p>
+          <p className='text-lg md:text-xl'>1 minutes zone 5 (Hard)</p>
+          <p className='text-lg md:text-xl'>2 minutes easy reset</p>
+          <h4 className='text-xl md:text-2xl font-bold mt-4'>Main Set:</h4>
+          <p className='text-xl mt-2'>3 minutes all out</p>
+          <p className='text-xl'>15 minutes easy recovery</p>
+          <p className='text-xl'>12 minutes all out</p>
+          <h4 className='text-xl md:text-2xl font-bold mt-4'>Cool Down:</h4>
+          <p className='text-lg md:text-xl mt-2'>10-15 minutes very easy spinning</p>
+        </div>
+      </div>
     </div>
   )
 }
