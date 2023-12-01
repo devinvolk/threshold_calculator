@@ -39,7 +39,7 @@ export function createPaces(rawCSS, scaler) {
 
 export function createRunningPaces(criticalVelocity, scaler) {
   const paces = []
-  for (let i = 0; i<9; i+=2) {
+  for (let i = 0; i<11; i+=2) {
     const paceMin = velocityConversion(criticalVelocity*scaler[i])
     const paceMax = velocityConversion(criticalVelocity*scaler[i+1])
     paces.push(`${formatRunTime(paceMin)}-${formatRunTime(paceMax)}`)

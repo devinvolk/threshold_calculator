@@ -6,8 +6,8 @@ import { createRunningPaces, createTableData, formatRunTime, velocityConversion 
 
 const Run = () => {
   // Data table variables defined
-  const descriptions = ['Recovery', 'Endurance', 'Aerobic Threshold', 'Critical Velocity', 'VO2max']
-  const scaler = [.6, .75, .76, .86, .87, .93, .97, 1.02, 1.03, 1.15]
+  const descriptions = ['Recovery', 'Endurance', 'Aerobic Threshold', 'Threshold', 'Critical Velocity', 'VO2max']
+  const scaler = [.6, .75, .76, .86, .87, .93, .93, 1, 1, 1.02, 1.03, 1.15]
 
   const [tableData, setTableData] = useState(null)
   const [showAlert, setShowAlert] = useState(false)
