@@ -113,7 +113,7 @@ const Run = () => {
       {formValues.criticalVelocity !== null && tableData !== null && (
         <div className='flex flex-col'>
           <div className="mt-9 mx-auto">
-            <p className='text-lg md:text-2xl'>Your Critical Velocity is: {formatRunTime(velocityConversion(formValues.criticalVelocity))} min/mile  {velocityConversion(formValues.criticalVelocity)}</p>
+            <p className='text-lg md:text-2xl'>Your Critical Velocity is: <span className='font-bold'>{formatRunTime(velocityConversion(formValues.criticalVelocity))} min/mile</span></p>
           </div>
           <div className='mt-9 col-span-12 mx-auto'>
           <table className="table-auto text-lg md:text-2xl text-gray-400 border-separate space-y-6">

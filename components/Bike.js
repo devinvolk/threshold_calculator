@@ -123,8 +123,8 @@ const Bike = () => {
       {formValues.criticalPower !== null && formValues.workCapacity !== null && tableData !== null && (
         <div className='flex flex-col'>
           <div className="mt-9 mx-auto">
-            <p className='text-lg md:text-2xl'>Your Critical Power is: {formValues.criticalPower}W</p>
-            <p className='text-lg md:text-2xl'>Your Work Capacity is: {formValues.workCapacity}J</p>
+            <p className='text-lg md:text-2xl'>Your Critical Power is: <span className='font-bold'>{formValues.criticalPower}W</span></p>
+            <p className='text-lg md:text-2xl'>Your Work Capacity is: <span className='font-bold'>{formValues.workCapacity}J</span></p>
           </div>
           <div className='mt-9 col-span-12 mx-auto'>
           <table className="table-auto text-lg md:text-2xl text-gray-400 border-separate space-y-6">

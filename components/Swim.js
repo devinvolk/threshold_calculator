@@ -125,7 +125,7 @@ const Swim = () => {
       {result !== null && (
         <div className='flex flex-col'>
           <div className="mt-9 mx-auto">
-            <p className='text-lg md:text-2xl'>Your CSS swim pace is {result} per 100</p>
+            <p className='text-lg md:text-2xl'>Your CSS swim pace is <span className='font-bold'>{result} per 100</span></p>
           </div>
           <div className='mt-9 col-span-12 mx-auto'>
             <table className="table-auto text-lg md:text-2xl text-gray-400 border-separate space-y-6">
