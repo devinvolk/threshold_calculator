@@ -4,8 +4,8 @@ import { formatTime, calculateCSS, createPaces, createTableData } from '@/utils/
 
 const Swim = () => {
   // Data table variables defined
-  const descriptions = ['Recovery', 'Endurance', 'Tempo', 'Threshold', 'VO2max']
-  const scaler = [1.3, 1.15, 1.14, 1.05, 1.04, 1.03, 1.01, 0.97, 0.95, 0.9]
+  const descriptions = ['Easy', 'Steady', 'Moderately Hard', 'Hard', 'Very Hard']
+  const scaler = [1.3, 1.15, 1.14, 1.05, 1.04, 1.03, 1.02, 0.97, 0.96, 0.9]
 
   const [selectedTwoHundredTime, setSelectedTwoHundredTime] = useState('');
   const [selectedFourHundredTime, setSelectedFourHundredTime] = useState('');
@@ -153,7 +153,7 @@ const Swim = () => {
       <div className='mx-5 mt-10'>
         <h2 className='text-center font-bold text-3xl md:text-4xl'>How to test your Critical Swim Speed:</h2>
         <p className='text-center text-lg md:text-2xl mt-2'>
-        To conduct a swim CSS (Critical Swim Speed) test, begin with a thorough warm-up to ensure your body is prepared for the test. 
+        To conduct a <span className='font-bold'>Critical Swim Speed (CSS)</span> test, begin with a thorough warm-up to ensure your body is prepared for the test. 
         The CSS test involves swimming a series of timed distances, a 400 and a 200, 
         with a rest interval in between. The objective is to swim these distances at a consistent pace, 
         pushing yourself to maintain the fastest sustainable speed. Record the time it takes to complete each distance, 

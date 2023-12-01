@@ -152,8 +152,8 @@ const Bike = () => {
       <div className='mx-5 mt-10'>
         <h2 className='text-center font-bold text-3xl md:text-4xl'>Why Critical Power?</h2>
         <p className='text-center text-lg md:text-2xl mt-2'>
-        Why opt for Critical Power (CP) over Functional Threshold Power (FTP)? While FTP has a longer history, 
-        CP is a newer model for estimating a cyclist's threshold, offering advantages in the testing process. 
+        Why opt for <span className='font-bold'>Critical Power (CP)</span> over <span className='font-bold'>Functional Threshold Power (FTP)</span>? 
+        While FTP has a longer history, CP is a newer model for estimating a cyclist's threshold, offering advantages in the testing process. 
         CP is typically measured with 3-minute and 12-minute all-out efforts, or an unpaced 4-minute test. 
         The shorter testing duration allows for more frequent assessments within a training block without 
         requiring a significant taper or precise pacing, as with the standard 20-minute FTP test. This flexibility 
@@ -161,7 +161,7 @@ const Bike = () => {
         </p>
         <h2 className='text-center font-bold text-3xl md:text-4xl mt-7'>How to test your Critical Power:</h2>
         <p className='text-center text-lg md:text-2xl mt-2'>
-        To conduct a cycling CP (critical power) test, it is best to use a smart trainer or a climb with a consistent gradient. 
+        To conduct a cycling CP test, it is best to use a smart trainer or a climb with a consistent gradient. 
         After a thorough warm-up, do a 3-minute all-out effort, try to consistently maintain your highest possible power. 
         Take a long easy break of at least 10-15 minutes, then do a 12-minute all-out effort. 
         This can be broken up into two consecutive days. Take your average power for each test and input them into the calculator above.

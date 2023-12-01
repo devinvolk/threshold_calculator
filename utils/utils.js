@@ -5,6 +5,21 @@ export function formatTime(time) {
     return formattedTime
   }
 
+export function formatRunTime(time) {
+  const totalSeconds = Math.floor(time * 60)
+  const minutesPart = Math.floor(totalSeconds / 60)
+  const secondsPart = totalSeconds % 60
+  const formattedMinutes = minutesPart.toString().padStart(2, '0')
+  const formattedSeconds = secondsPart.toString().padStart(2, '0')
+  return `${formattedMinutes}:${formattedSeconds}`
+}
+
+export function velocityConversion(criticalVelocity) {
+  const milesPerSecond = criticalVelocity/1609.34
+  const minPerMile = 1/(milesPerSecond*60)
+  return minPerMile
+}
+
 export function calculateCSS(twoHundredTime, fourHundredTime) {
     const twoHundredConversion = twoHundredTime.split(':').reduce((min, sec) => min * 60 + +sec, 0);
     const fourHundredConversion = fourHundredTime.split(':').reduce((min, sec) => min * 60 + +sec, 0);
@@ -21,6 +36,16 @@ export function createPaces(rawCSS, scaler) {
     }
     return paces
   }
+
+export function createRunningPaces(criticalVelocity, scaler) {
+  const paces = []
+  for (let i = 0; i<9; i+=2) {
+    const paceMin = velocityConversion(criticalVelocity*scaler[i])
+    const paceMax = velocityConversion(criticalVelocity*scaler[i+1])
+    paces.push(`${formatRunTime(paceMin)}-${formatRunTime(paceMax)}`)
+  }
+  return paces
+}
 
 export function createTableData(descriptions, paces) {
     const tableData = []
