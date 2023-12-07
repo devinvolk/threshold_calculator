@@ -3,8 +3,8 @@ import React from 'react'
 const About = () => {
   return (
     <div className='mt-5 px-5 md:mt-10'>
-        <h1 className='text-3xl font-bold md:text-5xl md:text-center'>Why is threshold testing important?</h1>
-        <p className='text-lg mt-2 md:text-2xl md:mt-7 md:text-center'>
+        <h1 className='text-3xl font-bold md:text-5xl text-center'>Why is threshold testing important?</h1>
+        <p className='text-lg mt-2 md:text-2xl md:mt-7 text-center'>
         Threshold testing plays a pivotal role in triathlon training and performance optimization. 
         Understanding and regularly assessing individual thresholds, such 
         <span className='font-bold capitalize'> critical swim speed (CSS)</span> and 
@@ -13,7 +13,7 @@ const About = () => {
         These tests provide valuable insights into an athlete's physiological
         limits and help identify the intensity at which the body transitions from aerobic to anaerobic metabolism. 
         </p>
-        <p className='text-lg mt-2 md:text-2xl md:mt-7 md:text-center'>
+        <p className='text-lg mt-2 md:text-2xl md:mt-7 text-center'>
         By pinpointing these thresholds, athletes and coaches can design 
         training zones that enhance <span className='font-bold capitalize'> endurance</span>, 
         <span className='font-bold capitalize'> power</span>, and 
