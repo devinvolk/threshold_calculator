@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from 'react-icons/ai';
+import Link from "next/link";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -45,13 +46,11 @@ const Navbar = () => {
           />
         </div>
         <div className="flex items-center h-full">
-          <h1
-            className={`mr-10 text-2xl font-bold ${
-              scrolled ? "text-black" : " text-white"
-            }`}
-          >
+          <Link href='/Coaching' className={`mr-10 text-2xl font-bold ${
+              scrolled ? "text-black hover:text-gray-700" : " text-white hover:text-gray-400"
+            }`}>
             Coaching
-          </h1>
+          </Link>
         </div>
       </div>
 
@@ -83,8 +82,12 @@ const Navbar = () => {
 
       {/* mobile drop down */}
       {menuOpen && (
-        <div className="absolute flex justify-center items-center h-20 right-0 w-36 bg-white">
-            <h1 className="text-xl font-bold">Coaching</h1>
+        <div className={`absolute flex justify-center items-center h-20 right-0 w-36 ${scrolled ? 'bg-white' : 'bg-black'}`}>
+            <Link href='/Coaching' className={`mr-10 text-2xl font-bold ${
+              scrolled ? "text-black hover:text-gray-700" : " text-white hover:text-gray-400"
+            }`}>
+              Coaching
+            </Link>
         </div>
       )}
     </nav>
