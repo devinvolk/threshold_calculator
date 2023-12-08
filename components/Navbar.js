@@ -3,9 +3,11 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const scrolling = () => {
     if (window.scrollY >= 1) {
@@ -14,6 +16,10 @@ const Navbar = () => {
       setScrolled(false);
     }
   };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", scrolling);
@@ -24,11 +30,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed z-50 h-14 md:h-20 w-full ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
-    >
+    <nav className={`fixed z-50 h-14 md:h-20 w-full ${scrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
+      
       {/* desktop nav */}
       <div className="hidden md:flex flex-row justify-between w-full h-full">
         <div className="flex items-center h-full">
@@ -63,8 +66,27 @@ const Navbar = () => {
             objectFit="cover"
           />
         </div>
-        <GiHamburgerMenu color={scrolled ? "black" : "white"} size={30} />
+        {menuOpen ?  (
+            <AiOutlineClose
+                color={scrolled ? 'black' : 'white'}
+                size={30}
+                onClick={toggleMenu}
+            />
+        ) : (
+            <GiHamburgerMenu
+                color={scrolled ? "black" : "white"}
+                size={30}
+                onClick={toggleMenu}
+            />
+        )}
       </div>
+
+      {/* mobile drop down */}
+      {menuOpen && (
+        <div className="absolute flex justify-center items-center h-20 right-0 w-36 bg-white">
+            <h1 className="text-xl font-bold">Coaching</h1>
+        </div>
+      )}
     </nav>
   );
 };
