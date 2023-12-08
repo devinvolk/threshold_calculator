@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="hidden md:flex flex-row justify-between w-full h-full">
         <div className="flex items-center h-full">
           <Image
-            src={scrolled ? "/logo_white.png" : "/logo_black.png"}
+            src={scrolled ? "/images/logo_white.png" : "/images/logo_black.png"}
             width={200}
             height={64}
             alt="DVolk Racing"
@@ -58,7 +58,7 @@ const Navbar = () => {
       <div className="md:hidden flex justify-between items-center h-full mx-4">
         <div className="flex items-center h-full">
           <Image
-            src={scrolled ? "/logo_white.png" : "/logo_black.png"}
+            src={scrolled ? "/images/logo_white.png" : "/images/logo_black.png"}
             width={100}
             height={64}
             alt="DVolk Racing"

@@ -6,7 +6,7 @@ const Hero = () => {
     <div className='relative flex justify-center items-center'>
         <div className='w-full relative'>
             <Image
-                src='/hero-image.jpg'
+                src='/images/hero-image.jpg'
                 width={1500}
                 height={500}
                 alt='swim, bike, run cover photo'
