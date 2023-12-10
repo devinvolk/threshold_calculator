@@ -31,17 +31,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed z-50 h-14 md:h-20 w-full ${scrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
+    <nav className={`fixed z-50 h-14 py-2 md:h-20 w-full ${scrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
       
       {/* desktop nav */}
       <div className="hidden md:flex flex-row justify-between w-full h-full">
         <div className="flex items-center h-full">
           <Image
             src={scrolled ? "/images/logo_white.png" : "/images/logo_black.png"}
-            width={200}
+            width={120}
             height={64}
             alt="DVolk Racing"
-            objectFit="cover"
+            style="contain"
             className="ml-10"
           />
         </div>
@@ -59,10 +59,10 @@ const Navbar = () => {
         <div className="flex items-center h-full">
           <Image
             src={scrolled ? "/images/logo_white.png" : "/images/logo_black.png"}
-            width={100}
+            width={80}
             height={64}
             alt="DVolk Racing"
-            objectFit="cover"
+            style="contain"
           />
         </div>
         {menuOpen ?  (
@@ -83,7 +83,7 @@ const Navbar = () => {
       {/* mobile drop down */}
       {menuOpen && (
         <div className={`absolute flex justify-center items-center h-20 right-0 w-36 ${scrolled ? 'bg-white' : 'bg-black'}`}>
-            <Link href='/Coaching' className={`mr-10 text-2xl font-bold ${
+            <Link href='/Coaching' className={`text-2xl font-bold ${
               scrolled ? "text-black hover:text-gray-700" : " text-white hover:text-gray-400"
             }`}>
               Coaching

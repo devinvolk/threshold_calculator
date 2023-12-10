@@ -26,7 +26,7 @@ const Coaching = () => {
           width={1500}
           height={500}
           alt="Devin Volk cycling in Red Rocks, Nevada"
-          objectFit="cover"
+          style='contain'
         ></Image>
         {/* mobile render */}
         <div className="md:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center z-10">

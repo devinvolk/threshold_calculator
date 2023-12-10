@@ -10,7 +10,7 @@ const Hero = () => {
                 width={1500}
                 height={500}
                 alt='swim, bike, run cover photo'
-                objectFit='cover'
+                style='cover'
             />
             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center'>
                 <h1 className='font-bold drop-shadow-sm text-white text-center text-4xl md:text-8xl'>Welcome to the Threshold Calculator!</h1>
