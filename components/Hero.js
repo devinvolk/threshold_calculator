@@ -1,16 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
+import heroImage from '../public/images/hero-image.jpg'
 
 const Hero = () => {
   return (
     <div className='relative flex justify-center items-center'>
         <div className='w-full relative'>
             <Image
-                src='/images/hero-image.jpg'
-                width={1500}
-                height={500}
+                src={heroImage}
                 alt='swim, bike, run cover photo'
-                style='cover'
                 priority={true}
             />
             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center'>

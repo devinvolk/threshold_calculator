@@ -1,10 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from 'react-icons/ai';
 import Link from "next/link";
+import Image from "next/image";
+import blackImage from '../public/images/logo_black.png';
+import whiteImage from '../public/images/logo_white.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,12 +39,9 @@ const Navbar = () => {
       <div className="hidden md:flex flex-row justify-between w-full h-full">
         <div className="flex items-center h-full">
           <Image
-            src={scrolled ? "/images/logo_white.png" : "/images/logo_black.png"}
-            width={120}
-            height={60}
+            src={scrolled ? whiteImage : blackImage}
             alt="DVolk Racing"
-            className="ml-10"
-            style='contain'
+            className="object-contain object-left ml-10 max-w-full max-h-full"
           />
         </div>
         <div className="flex items-center h-full">
@@ -58,11 +57,9 @@ const Navbar = () => {
       <div className="md:hidden flex justify-between items-center h-full mx-4">
         <div className="flex items-center h-full">
           <Image
-            src={scrolled ? "/images/logo_white.png" : "/images/logo_black.png"}
-            width={80}
-            height={64}
+            src={scrolled ? whiteImage : blackImage}
             alt="DVolk Racing"
-            style="contain"
+            className="object-contain object-left max-w-full max-h-full"
           />
         </div>
         {menuOpen ?  (

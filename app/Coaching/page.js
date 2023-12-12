@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
+import heroCoaching from '../../public/images/hero_coaching.JPG';
 
 const Coaching = () => {
   const handleClick = () => {
@@ -28,11 +29,8 @@ const Coaching = () => {
     <div>
       <div className="w-full relative">
         <Image
-          src="/images/hero_coaching.JPG"
-          width={1500}
-          height={500}
+          src={heroCoaching}
           alt="Devin Volk cycling in Red Rocks, Nevada"
-          style='contain'
           priority={true}
         ></Image>
         {/* mobile render */}
@@ -78,7 +76,7 @@ const Coaching = () => {
         {/* larger devices render */}
         <div className="hidden md:block">
           <h1 className="text-5xl text-center mx-5 mt-20">Hi, I'm <span className="font-bold">Devin Volk</span>, creator of this site and endurance sports coach!</h1>
-          <p className="text-2xl text-center mt-10">Over the years, I have successfully coached numerous athletes to <span className="font-bold">Personal Best's, Ironman World Championship Qualifications,</span> and <span className="font-bold">Boston Marathon Qualifications. </span>
+          <p className="text-2xl text-center mt-10">Over the years, I have successfully coached numerous athletes to <span className="font-bold">Personal Bests, Ironman World Championship Qualifications,</span> and <span className="font-bold">Boston Marathon Qualifications. </span>
           I believe that with the right training plan, every athlete can stay <span className="font-bold">Injury Free, Happy,</span> and <span className="font-bold">Succeed</span>.
           </p>
         </div>
