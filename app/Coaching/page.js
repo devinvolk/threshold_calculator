@@ -1,7 +1,7 @@
 "use client";
 
+import React, { useRef } from "react";
 import Image from "next/image";
-import React from "react";
 
 const Coaching = () => {
   const handleClick = () => {
@@ -11,12 +11,18 @@ const Coaching = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(
-      "This feature is still in development. Please message @devinvolk on Instagram. Thank you!"
-    );
-  };
+  const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY)
+          .then((result) => {
+              alert("Thank you for your message! Devin will get back to you shortly.");
+          }, (error) => {
+            alert("Unfortunately an error has occured. Please contact Devin on instagram @devinvolk. Sorry for the inconvenience."); 
+            console.log(error.text);
+          });
+      };
 
   return (
     <div>
@@ -27,6 +33,7 @@ const Coaching = () => {
           height={500}
           alt="Devin Volk cycling in Red Rocks, Nevada"
           style='contain'
+          priority={true}
         ></Image>
         {/* mobile render */}
         <div className="md:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center z-10">
@@ -52,7 +59,7 @@ const Coaching = () => {
       <div className="mx-5 md:mx-10">
         {/* mobile render */}
         <div className="md:hidden">
-        <p className="text-2xl text-center mt-10">Over the years, I have successfully coached numerous athletes to <span className="font-bold">Personal Best's, Ironman World Championship's,</span> and <span className="font-bold">Boston Marathon Qualifications. </span>
+        <p className="text-2xl text-center mt-10">Over the years, I have successfully coached numerous athletes to <span className="font-bold">Personal Bests, Ironman World Championships,</span> and <span className="font-bold">Boston Marathon Qualifications. </span>
           I believe that with the right support, guidance, and training plan, everyone can stay <span className="font-bold">injury free, happy,</span> and <span className="font-bold">succeed</span>.
         </p>
         <p className="text-2xl text-center mt-10">
@@ -96,47 +103,54 @@ const Coaching = () => {
           Send me a message!
         </h1>
         <form
-          onSubmit={handleSubmit}
-          className="flex flex-col mt-10 mx-2 md:mx-auto md:w-4/5"
-        >
-          <label htmlFor="name" className="text-xl">
-            Name:
-          </label>
-          <input
-            id="name"
-            type="text"
-            placeholder="Jane Doe"
-            required
-            className="shadow md:shadow-lg appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          ></input>
-          <label htmlFor="email" className="text-xl mt-10">
-            Email:
-          </label>
-          <input
-            id="email"
-            type="email"
-            placeholder="janedoe@gmail.com"
-            required
-            className="shadow md:shadow-lg appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          ></input>
-          <label htmlFor="message" className="text-xl mt-10">
-            Message:
-          </label>
-          <input
+        ref={form}
+        onSubmit={sendEmail}
+        className="flex flex-col mt-10 mx-2 md:mx-auto md:w-4/5"
+      >
+        <label htmlFor="name" className="text-xl">
+          Name:
+        </label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autoComplete="off"
+          placeholder="Jane Doe"
+          required
+          className="shadow md:shadow-lg appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        ></input>
+        <label htmlFor="email" className="text-xl mt-10">
+          Email:
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="off"
+          placeholder="janedoe@gmail.com"
+          required
+          className="shadow md:shadow-lg appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        ></input>
+        <label htmlFor="message" className="text-xl mt-10">
+          Message:
+        </label>
+        <input
             id="message"
-            type="text"
-            placeholder="Write your message here..."
-            className="shadow md:shadow-lg appearance-none border rounded pt-2 pb-80 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          ></input>
-          <div className="flex justify-center mt-10 mb-20">
-            <button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded flex"
-            >
-              Send
-            </button>
-          </div>
-        </form>
+          name="message"
+          type="text"
+          autoComplete="off"
+          placeholder="Write your message here..."
+          className="shadow md:shadow-lg appearance-none border rounded pt-2 pb-80 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        ></input>
+        <div className="flex justify-center mt-10 mb-20">
+          <button
+            type="submit"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded flex"
+          >
+            Send
+          </button>
+        </div>
+      </form>
       </div>
     </div>
   );

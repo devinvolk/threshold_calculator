@@ -39,10 +39,10 @@ const Navbar = () => {
           <Image
             src={scrolled ? "/images/logo_white.png" : "/images/logo_black.png"}
             width={120}
-            height={64}
+            height={60}
             alt="DVolk Racing"
-            style="contain"
             className="ml-10"
+            style='contain'
           />
         </div>
         <div className="flex items-center h-full">
