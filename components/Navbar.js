@@ -33,7 +33,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed z-50 h-14 py-2 md:h-20 w-full ${scrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
+    <nav className={`fixed z-50 h-14 py-2 md:h-20 w-full ${ menuOpen ? "bg-white shadow-md" : (scrolled ? "bg-white shadow-md" : "bg-transparent")}`}>
       
       {/* desktop nav */}
       <div className="hidden md:flex flex-row justify-between w-full h-full">
@@ -57,14 +57,14 @@ const Navbar = () => {
       <div className="md:hidden flex justify-between items-center h-full mx-4">
         <div className="flex items-center h-full">
           <Image
-            src={scrolled ? whiteImage : blackImage}
+            src={menuOpen? whiteImage : (scrolled ? whiteImage : blackImage)}
             alt="DVolk Racing"
             className="object-contain object-left max-w-full max-h-full"
           />
         </div>
         {menuOpen ?  (
             <AiOutlineClose
-                color={scrolled ? 'black' : 'white'}
+                color={menuOpen ? 'black' : (scrolled ? 'black' : 'white')}
                 size={30}
                 onClick={toggleMenu}
             />
@@ -79,10 +79,8 @@ const Navbar = () => {
 
       {/* mobile drop down */}
       {menuOpen && (
-        <div className={`absolute flex justify-center items-center h-20 right-0 w-36 ${scrolled ? 'bg-white' : 'bg-black'}`}>
-            <Link href='/Coaching' className={`text-2xl font-bold ${
-              scrolled ? "text-black hover:text-gray-700" : " text-white hover:text-gray-400"
-            }`}>
+        <div className="fixed flex justify-center h-screen right-0 w-60 bg-white">
+            <Link href='/Coaching' className="text-2xl mt-12 font-bold text-black">
               Coaching
             </Link>
         </div>
