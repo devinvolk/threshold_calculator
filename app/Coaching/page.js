@@ -1,8 +1,11 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import heroCoaching from '../../public/images/hero_coaching.JPG';
+import Link from "next/link";
+import { IoReturnDownBackOutline } from 'react-icons/io5'
+
 
 const Coaching = () => {
   const handleClick = () => {
@@ -25,9 +28,22 @@ const Coaching = () => {
           });
       };
 
+      useEffect(() => {
+        document.body.style.overflow = 'auto'
+      }, [])
+      
+
   return (
     <div>
       <div className="w-full relative">
+      <div className="bg-transparent absolute z-50 top-2">
+          <Link href={'/'} className="ml-2 flex flex-row">
+            <div className="flex items-center mr-1 text-lg">
+              <IoReturnDownBackOutline  />
+            </div>
+            <h1 className="text-black text-sm">back</h1>
+          </Link>
+        </div>
         <Image
           src={heroCoaching}
           alt="Devin Volk cycling in Red Rocks, Nevada"

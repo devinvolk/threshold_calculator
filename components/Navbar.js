@@ -32,6 +32,14 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [menuOpen]);
+
   return (
     <nav className={`fixed z-50 h-14 py-2 md:h-20 w-full ${ menuOpen ? "bg-white shadow-md" : (scrolled ? "bg-white shadow-md" : "bg-transparent")}`}>
       
@@ -78,13 +86,11 @@ const Navbar = () => {
       </div>
 
       {/* mobile drop down */}
-      {menuOpen && (
-        <div className="fixed flex justify-center h-screen right-0 w-60 bg-white">
+        <div className={`${menuOpen ? 'mr-0' : 'mr-[-240px]'} transition-[margin-right] ease-in-out duration-500 fixed flex justify-center bottom-0 top-12 right-0 w-60 z-40 bg-white`}>
             <Link href='/Coaching' className="text-2xl mt-12 font-bold text-black">
               Coaching
             </Link>
         </div>
-      )}
     </nav>
   );
 };
