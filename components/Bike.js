@@ -149,9 +149,9 @@ const Bike = () => {
         </div>
       </div>
       )}
-      <div className='mx-5 mt-10'>
+      <div className='mx-5 mt-10 md:mt-36 md:mx-32'>
         <h2 className='text-center font-bold text-3xl md:text-4xl'>Why Critical Power?</h2>
-        <p className='text-center text-lg md:text-2xl mt-2'>
+        <p className='text-center text-lg md:text-2xl mt-2 md:mt-10'>
         Why opt for <span className='font-bold'>Critical Power (CP)</span> over <span className='font-bold'>Functional Threshold Power (FTP)</span>? 
         While FTP has a longer history, CP is a newer model for estimating a cyclist's threshold, offering advantages in the testing process. 
         CP is typically measured with 3-minute and 12-minute all-out efforts, or an unpaced 4-minute test. 
@@ -159,14 +159,14 @@ const Bike = () => {
         requiring a significant taper or precise pacing, as with the standard 20-minute FTP test. This flexibility 
         enables athletes to regularly evaluate changes to their CP, allowing for more specific and tailored training adjustments.
         </p>
-        <h2 className='text-center font-bold text-3xl md:text-4xl mt-7'>How to test your Critical Power:</h2>
-        <p className='text-center text-lg md:text-2xl mt-2'>
+        <h2 className='text-center font-bold text-3xl md:text-4xl mt-7 md:mt-20'>How to test your Critical Power:</h2>
+        <p className='text-center text-lg md:text-2xl mt-2 md:mt-10'>
         To conduct a cycling CP test, it is best to use a smart trainer or a climb with a consistent gradient. 
         After a thorough warm-up, do a 3-minute all-out effort, try to consistently maintain your highest possible power. 
         Take a long easy break of at least 10-15 minutes, then do a 12-minute all-out effort. 
         This can be broken up into two consecutive days. Take your average power for each test and input them into the calculator above.
         </p>
-        <div className='flex flex-col justify-center items-center mt-7'>
+        <div className='flex flex-col justify-center items-center mt-7 md:mt-12'>
           <h3 className='text-xl md:text-3xl font-bold'>Example set:</h3>
           <h4 className='text-lg md:text-2xl font-bold mt-4'>Warm Up:</h4>
           <p className='text-lg md:text-xl mt-2'>20 minutes easy spinning</p>

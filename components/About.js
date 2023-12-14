@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="mt-5 px-5 md:mt-10">
+    <div className="mt-5 px-5 md:mt-10 md:mx-32">
       <h1 className="text-3xl font-bold md:text-5xl text-center">
         Why is threshold testing important?
       </h1>
@@ -38,10 +38,10 @@ const About = () => {
         triathlon training strategies, ensuring that athletes reach their peak
         fitness levels and achieve their competitive goals.
       </p>
-      <h1 className="text-3xl font-bold md:text-5xl text-center md:mt-20 mt-10">
+      <h1 className="text-3xl font-bold md:text-5xl text-center mt-10 md:mt-36">
         Interested in Hiring a Coach?
       </h1>
-      <div className="flex w-full justify-center mt-5 mb-16 md:mt-7 md:mb-20">
+      <div className="flex w-full justify-center mt-5 mb-16 md:mt-7 md:mb-36">
         <Link href="/Coaching">
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded flex">
             Click Here!

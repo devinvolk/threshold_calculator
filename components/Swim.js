@@ -185,11 +185,11 @@ const Swim = () => {
           </div>
         </div>
       )}
-      <div className="mx-5 mt-10">
+      <div className="mx-5 mt-10 md:mt-36 md:mx-32">
         <h2 className="text-center font-bold text-3xl md:text-4xl">
           How to test your Critical Swim Speed:
         </h2>
-        <p className="text-center text-lg md:text-2xl mt-2">
+        <p className="text-center text-lg md:text-2xl md:mt-10 mt-2">
           To conduct a{" "}
           <span className="font-bold">Critical Swim Speed (CSS)</span> test,
           begin with a thorough warm-up to ensure your body is prepared for the

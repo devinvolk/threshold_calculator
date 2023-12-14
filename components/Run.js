@@ -138,9 +138,9 @@ const Run = () => {
         </div>
       </div>
       )}
-      <div className='mx-5 mt-10'>
+      <div className='mx-5 mt-10 md:mt-36 md:mx-32'>
         <h2 className='text-center font-bold text-3xl md:text-4xl'>How to test your Critical Velocity:</h2>
-        <p className='text-center text-lg md:text-2xl mt-2'>
+        <p className='text-center text-lg md:text-2xl mt-2 md:mt-10'>
         To conduct a running <span className='font-bold'>Critical Velocity (CP)</span> test, it is best to use a track or a measured flat road. 
         After a thorough warm-up, do a 400m all-out effort. 
         Take a long easy break of at least 10-15 minutes, then do a 2,000m all-out effort.
@@ -148,7 +148,7 @@ const Run = () => {
         Depending on your experience, this can be broken up into two consecutive days. 
         Take your average power for each test and input them into the calculator above.
         </p>
-        <div className='flex flex-col justify-center items-center mt-7'>
+        <div className='flex flex-col justify-center items-center mt-7 md:mt-10'>
           <h3 className='text-xl md:text-3xl font-bold'>Example set:</h3>
           <h4 className='text-lg md:text-2xl font-bold mt-4'>Warm Up:</h4>
           <p className='text-lg md:text-xl mt-2'>20 minutes easy jog</p>
