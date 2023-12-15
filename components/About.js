@@ -1,7 +1,17 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import CoachingModal from "./CoachingModal";
 
 const About = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [hasModalClosed, setHasModalClosed] = useState(false);
+
+  const handleClose = () => {
+    setHasModalClosed(true);
+    setIsModalVisible(false);
+  }
+
   return (
     <div className="mt-5 px-5 md:mt-10 md:mx-32">
       <h1 className="text-3xl font-bold md:text-5xl text-center">
@@ -38,7 +48,13 @@ const About = () => {
         triathlon training strategies, ensuring that athletes reach their peak
         fitness levels and achieve their competitive goals.
       </p>
-      <h1 className="text-3xl font-bold md:text-5xl text-center mt-10 md:mt-36">
+      <CoachingModal
+        isModalVisible={isModalVisible}
+        setIsModalVisible={setIsModalVisible}
+        hasModalClosed={hasModalClosed}
+        handleClose={handleClose}
+      />
+      {/* <h1 className="text-3xl font-bold md:text-5xl text-center mt-10 md:mt-36">
         Interested in Hiring a Coach?
       </h1>
       <div className="flex w-full justify-center mt-5 mb-16 md:mt-7 md:mb-36">
@@ -47,7 +63,7 @@ const About = () => {
             Click Here!
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
