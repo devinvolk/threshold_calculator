@@ -51,7 +51,7 @@ const Coaching = () => {
       <div className="w-full relative">
         <div className="bg-transparent absolute z-50 top-2">
           <Link href={"/"} className="ml-2 md:ml-4 flex flex-row">
-            <div className="flex items-center mr-1 text-lg md:text-5xl hover:md:text-6xl">
+            <div className="flex items-center mr-1 text-lg md:text-4xl hover:md:text-5xl">
               <IoReturnDownBackOutline />
             </div>
             <div className="flex items-center">
@@ -85,7 +85,7 @@ const Coaching = () => {
           </div>
         </div>
       </div>
-      <div className="mx-5 md:mx-10">
+      <div className="mx-5 md:mx-32">
         {/* mobile render */}
         <div className="md:hidden">
           <p className="text-2xl text-center mt-10">
@@ -189,6 +189,7 @@ const Coaching = () => {
             type="text"
             autoComplete="off"
             placeholder="Write your message here..."
+            required
             className="shadow md:shadow-lg appearance-none border rounded pt-2 pb-80 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           ></input>
           <div className="flex justify-center mt-10 mb-20">
