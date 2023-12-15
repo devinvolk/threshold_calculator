@@ -50,11 +50,13 @@ const Coaching = () => {
     <div>
       <div className="w-full relative">
         <div className="bg-transparent absolute z-50 top-2">
-          <Link href={"/"} className="ml-2 flex flex-row">
-            <div className="flex items-center mr-1 text-lg">
+          <Link href={"/"} className="ml-2 md:ml-4 flex flex-row">
+            <div className="flex items-center mr-1 text-lg md:text-5xl hover:md:text-6xl">
               <IoReturnDownBackOutline />
             </div>
-            <h1 className="text-black text-sm">back</h1>
+            <div className="flex items-center">
+            <h1 className="text-black text-sm md:hidden">Back</h1>
+            </div>
           </Link>
         </div>
         <Image

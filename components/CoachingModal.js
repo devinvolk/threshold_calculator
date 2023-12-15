@@ -25,16 +25,16 @@ const CoachingModal = ({ isModalVisible, setIsModalVisible, hasModalClosed, hand
         isModalVisible ? "block" : "hidden"
       }`}
     >
-      <div className="absolute w-4/5 bg-white shadow-2xl rounded-2xl">
-        <div className="flex justify-end mt-3 mr-2">
+      <div className="absolute w-4/5 bg-white shadow-2xl rounded-2xl md:w-2/3">
+        <div className="flex justify-end mt-3 mr-2 md:mt-6 md:mr-4">
           <AiOutlineClose color="black" size={25} onClick={handleClose} />
         </div>
-        <h1 className="text-3xl font-bold md:text-5xl text-center mx-4 mt-2 md:mt-36">
+        <h1 className="text-3xl font-bold md:text-5xl text-center mx-4 mt-2 md:mt-14">
           Interested in Hiring a Coach?
         </h1>
-        <div className="flex w-full justify-center mt-5 mb-7 md:mt-7 md:mb-36">
+        <div className="flex w-full justify-center mt-5 mb-7 md:mt-7 md:mb-20">
           <Link href="/Coaching">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded flex">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded md:py-4 md:px-8 md:text-2xl md:rounded-lg">
               Click Here!
             </button>
           </Link>
