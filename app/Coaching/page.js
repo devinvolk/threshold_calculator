@@ -6,6 +6,7 @@ import heroCoaching from "../../public/images/hero_coaching.JPG";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
 import { IoReturnDownBackOutline } from "react-icons/io5";
+import Footer from "@/components/Footer";
 
 const Coaching = () => {
   const handleClick = () => {
@@ -47,7 +48,7 @@ const Coaching = () => {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-[1536px] mx-auto">
       <div className="w-full relative">
         <div className="bg-transparent absolute z-50 top-2">
           <Link href={"/"} className="ml-2 md:ml-4 flex flex-row">
@@ -202,6 +203,7 @@ const Coaching = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 };

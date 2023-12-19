@@ -41,7 +41,7 @@ const Navbar = () => {
   }, [menuOpen]);
 
   return (
-    <nav className={`fixed z-50 h-14 py-2 md:h-20 w-full ${ menuOpen ? "bg-white shadow-md" : (scrolled ? "bg-white shadow-md" : "bg-transparent")}`}>
+    <nav className={`fixed z-50 h-14 py-2 md:h-20 w-full max-w-[1536px] ${ menuOpen ? "bg-white shadow-md" : (scrolled ? "bg-white shadow-md" : "bg-transparent")}`}>
       
       {/* desktop nav */}
       <div className="hidden md:flex flex-row justify-between w-full h-full">
